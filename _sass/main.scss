@@ -2,7 +2,7 @@
 
 $primary: #fbf3f0;
 $secondary: #4a8d82;
-$light: #ffffff;
+$light: #f8dacf;
 $dark: #6d6a6a;
 
 $theme-colors: (
@@ -23,6 +23,12 @@ $headings-color: $dark;
 $enable-responsive-font-sizes: true;
 
 @import "bootstrap/scss/bootstrap";
+
+
+/********** Font Awesome **********/
+
+@import "fa/fontawesome.scss";
+@import "fa/solid.scss";
 
 
 /********** Custom CSS ************/
@@ -84,13 +90,17 @@ h6 {
     outline: none;
 }
 
+.navbar-light .navbar-brand:hover{
+    color: $secondary;
+}
+
 .navbar-text {
     font-size: 18px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: $light;
+    color: $white;
     background: $secondary;
 }
 
