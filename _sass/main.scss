@@ -49,7 +49,7 @@ $enable-responsive-font-sizes: true;
 }
 
 body{
-    min-width: 320px;
+    min-width: 400px;
     font-size: 1.5em;
 }
 
@@ -116,16 +116,21 @@ h6 {
     border-right: 1px solid;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .navbar-light .navbar-nav .nav-link  {
         padding: 10px 15px;
     }
     .navbar-light .navbar-brand {
-        font-size: 30px;
         padding: 25px 15px;   
     }
     .brandseparator{
         height: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-light .navbar-brand {
+        font-size: 40px; 
     }
 }
 
