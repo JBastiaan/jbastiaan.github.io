@@ -11,7 +11,7 @@
   <link href="/assets/images/favicon.ico" rel="icon">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v={{ site.time | date:'%s' }}">
 
   <!-- Jekyll Plugins -->
   {% feed_meta %}
@@ -24,7 +24,7 @@
   {% include navigation.html %}
   {{ content }}
   {% include footer.html %}
-
+  {% include whatsappbutton.html %}
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

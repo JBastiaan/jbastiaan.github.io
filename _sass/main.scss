@@ -68,6 +68,10 @@ h6 {
     font-weight: 600 !important;
 }
 
+.row{
+    margin: 0px;
+}
+
 .readmore{
     color: $secondary;
     font-size: 1.2em;
@@ -133,5 +137,17 @@ h6 {
 .form-control:focus{
     border-color: $secondary;
     border-width: 3px;
-    
+}
+
+.whatsapp-chat{
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    cursor: pointer; 
+    z-index: 99999999;
+}
+
+.whatsapp-chat img{
+    width: 100px; 
+    height: 100px;
 }
