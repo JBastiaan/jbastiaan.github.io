@@ -1,3 +1,67 @@
 ---
 title: Contact
 ---
+<div class="container-fluid pt-5">
+  <div class="d-flex flex-column text-center mb-5 pt-5">
+    <h1 class="text-secondary mb-3">Stuur een bericht</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8 mb-5">
+      <div class="contact-form">
+        <div id="success"></div>
+        <form class="needs-validation" action="https://getform.io/f/1a32d7e9-209c-444e-809e-fa91cae21c8d" novalidate method="POST">
+          <div class="form-group">
+            <input type="text" name="Naam" class="form-control p-4" id="inputNaam" placeholder="Naam" required />
+            <div class="invalid-feedback">
+              Voer je naam in!
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" name="Email" class="form-control p-4" id="email" placeholder="E-mailadres" required />
+            <div class="invalid-feedback">
+              Voer je e-mailadres in!
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Onderwerp" class="form-control p-4" id="subject" placeholder="Onderwerp"
+              required />
+            <div class="invalid-feedback">
+              Voer een onderwerp in!
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control p-4" name="Bericht" rows="6" id="message" placeholder="Bericht"
+              required></textarea>
+            <div class="invalid-feedback">
+              Voer een bericht in!
+            </div>
+          </div>
+          <div class="g-recaptcha mb-3" data-sitekey="6LcxLi4fAAAAAB9PryfMOeQe_Rs38A3hkUR5PjM8"></div>
+          <div>
+            <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Verstuur bericht</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>

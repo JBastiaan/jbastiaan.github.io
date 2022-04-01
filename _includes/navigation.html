@@ -11,16 +11,16 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarText">
+  <div class="collapse navbar-collapse ml-2" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home</a>
+      <li class="nav-item">
+        <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tarieven.html">Tarieven</a>
+        <a class="nav-link {% if page.url == '/tarieven.html' %}active{% endif %}" href="/tarieven.html">Tarieven</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contact.html">Contact</a>
+        <a class="nav-link {% if page.url == '/contact.html' %}active{% endif %}" href="/contact.html">Contact</a>
       </li>
     </ul>
     <span class="navbar-text text-secondary d-none d-lg-block">

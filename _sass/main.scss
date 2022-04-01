@@ -124,3 +124,14 @@ h6 {
         height: 0px;
     }
 }
+
+.btn-primary{
+    background-color: $secondary;
+    color: $white
+}
+
+.form-control:focus{
+    border-color: $secondary;
+    border-width: 3px;
+    
+}
