@@ -5,7 +5,8 @@ title: Praktijk Gerna
 <div class="container py-4">
     <div class="row align-items-top">
         <div class="col-xl">
-            <img class="img-fluid w-100 shadow-long" style="border-radius: 100%;" src="assets/images/imagehomepage.jpg" alt="">
+            <img class="img-fluid w-100 shadow-long" style="border-radius: 100%;" src="assets/images/imagehomepage.jpg"
+                alt="">
         </div>
         <div class="col-xl py-5 py-xl-0 px-3 px-xl-5">
             <h1 class="text-secondary mb-3">Welkom,</h1>
@@ -13,28 +14,44 @@ title: Praktijk Gerna
             <p class="mb-4">
                 Graag wil ik je een plek bieden waar je welkom bent, je begrepen voelt, jij je geaccepteerd mag weten
                 met alles wat er is.
-                Een plek om te mogen ‘zijn’, een plek om even tot rust te komen. En een plek van waaruit je mag werken naar nieuw leven.
+                Een plek om te mogen ‘zijn’, een plek om even tot rust te komen. En een plek van waaruit je mag werken
+                naar nieuw leven.
             </p>
             <p class="collapse" id="viewdetails">
                 Waarvoor kan je bij mij terecht?
                 Wanneer het je momenteel niet lukt om jouw leven te leven zoals jij dat voor ogen hebt.
                 Dit kunnen allerlei uiteenlopende oorzaken hebben.
                 Ben je moe of voel je je simpelweg gewoon op? Voelt alles teveel? Of ervaar je misschien angsten?
-                Heb je last van somberheid, moeite met het aangeven van grenzen, heb je last van stress, of misschien zelfs een burn out?
-                Waar je ook tegenaan loopt, als psychosociaal therapeut bied ik je graag een plek aan waar je tot rust mag komen en van waaruit we samen onderweg gaan.
+                Heb je last van somberheid, moeite met het aangeven van grenzen, heb je last van stress, of misschien
+                zelfs een burn out?
+                Waar je ook tegenaan loopt, als psychosociaal therapeut bied ik je graag een plek aan waar je tot rust
+                mag komen en van waaruit we samen onderweg gaan.
                 Ik werk met een open hart, met aandacht en nabijheid, maar ook met visie zodat we samen richting kunnen
                 geven aan jouw weg.
                 Dit alles vanuit het vertrouwen dat de weg zich zal openbaren en jij handvatten en richting hebt om
                 verder te wandelen op jouw pad.
-            <br>
-            <br>
+                <br>
+                <br>
                 Benieuwd geworden? Ik kom graag met je in contact voor een kennismaking.
             </p>
             <p>
-                <a class="btn btn-link readmore" data-toggle="collapse" data-target="#viewdetails">
+                <a class="btn btn-link readmore" id="readmorelink" data-toggle="collapse" data-target="#viewdetails">
                     Lees Meer
                     &raquo;</a>
             </p>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#viewdetails').on('hidden.bs.collapse', function () {
+            // do something…
+            $('#readmorelink').html("Lees Meer &raquo;");
+        });
+        $('#viewdetails').on('shown.bs.collapse', function () {
+            // do something…
+            $('#readmorelink').html("Minder &raquo;");
+        });
+    });
+</script>
